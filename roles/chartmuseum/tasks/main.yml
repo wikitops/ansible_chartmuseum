@@ -1,0 +1,5 @@
+---
+
+- name: CHART MUSEUM | Manage local deployment
+  import_tasks: local.yml
+  when: chartmuseum_repository_type == "local"

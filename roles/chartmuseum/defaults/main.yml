@@ -1,0 +1,16 @@
+---
+
+###
+# HELM CHART MUSEUM
+###
+
+# Chart repository
+chartmuseum_repository_type: local
+
+# Chart repository : Local
+chartmuseum_local_path: /data/helm
+
+# Chart Museum Docker
+chartmuseum_docker_image: chartmuseum/chartmuseum:v0.8.1
+chartmuseum_docker_name: chartmuseum
+chartmuseum_docker_port: "8080:8080"

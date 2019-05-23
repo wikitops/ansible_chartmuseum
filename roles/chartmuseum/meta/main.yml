@@ -1,0 +1,33 @@
+---
+
+dependencies:
+  - role: docker
+    vars:
+      docker_users: ["vagrant"]
+
+galaxy_info:
+  author: wikitops
+  description: Helm Chart Museum for Linux.
+  company: "Wikitops"
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.4
+  platforms:
+  - name: EL
+    versions:
+    - 6
+    - 7
+  - name: Fedora
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - stretch
+  - name: Ubuntu
+    versions:
+    - trusty
+    - xenial
+    - bionic
+  galaxy_tags:
+    - helm
+    - chart
+    - museum

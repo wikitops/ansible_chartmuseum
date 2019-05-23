@@ -1,0 +1,26 @@
+---
+
+- name: CHART MUSEUM LOCAL | Create directory
+  file:
+    path: "{{ chartmuseum_local_path }}"
+    owner: root
+    group: root
+    mode: 0644
+    state: directory
+
+- name: CHART MUSEUM LOCAL | Deploy Helm Chart Museum on Docker
+  docker_container:
+    auto_remove: yes
+    name: "{{ chartmuseum_docker_name }}"
+    image: "{{ chartmuseum_docker_image }}"
+    interactive: yes
+    detach: yes
+    state: started
+    recreate: yes
+    env:
+      STORAGE: "{{ chartmuseum_repository_type }}"
+      STORAGE_LOCAL_ROOTDIR: "/charts"
+    ports:
+      - "{{ chartmuseum_docker_port }}"
+    volumes:
+      - "{{ chartmuseum_local_path }}/charts:/charts"
