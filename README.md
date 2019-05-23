@@ -33,7 +33,7 @@ To deploy Chart Museum on Vagrant instance, just run this command :
 $ vagrant up
 ```
 
-If everything run as expected, you should be able to list the virtual machine created :
+If everything run as expected, you should be able to list the virtual machine created : http://10.0.4.11:8080/
 
 ```bash
 $ vagrant status
